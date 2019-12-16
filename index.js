@@ -22,11 +22,14 @@ const restaurant = require('./src/routes/restaurant');
 app.use('/aggregator', restaurant);
 
 app.get('/', (req, res) => {
-   res.send('Aggregator Gateway Server Started');
+    res.send('Aggregator Gateway Server Started');
 });
 
-app.listen(config.port, (err) => {
-    console.log('Aggregator Gateway Server is running at port ',  config.port);
+const PORT = process.env.PORT || 4444;
+const IP_ADDRESS = process.env.IP_ADDRESS || '127.0.0.1';
+
+app.listen(PORT, (err) => {
+    console.log('Aggregator Gateway Server is running at IP, Port Number ', IP_ADDRESS, PORT);
 });
 
 
