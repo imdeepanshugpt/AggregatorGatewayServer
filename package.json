@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon --exec babel-node index.js",
+    "build": "babel ./src --out-dir ./dist"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,9 @@
   },
   "homepage": "https://github.com/imdeepanshugpt/AggregatorGatewayServer#readme",
   "dependencies": {
+    "@babel/cli": "^7.7.5",
+    "@babel/plugin-transform-runtime": "^7.7.6",
+    "@babel/runtime": "^7.7.6",
     "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
@@ -26,6 +30,16 @@
     "bluebird": "^3.7.2",
     "consul": "^0.36.0",
     "pm2": "^4.2.1",
-    "uuid": "^3.3.3"
+    "uuid": "^3.3.3",
+    "winston": "^2.2.0",
+    "winston-daily-rotate-file": "^1.4.2",
+    "swagger-jsdoc": "^3.4.0",
+    "swagger-ui-express": "^4.0.7"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/node": "^7.7.4",
+    "@babel/preset-env": "^7.7.6",
+    "@babel/register": "^7.7.4"
   }
 }
