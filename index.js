@@ -2,6 +2,7 @@
  * library imports
  */
 require('dotenv/config');
+require('./config/consul');
 const express = require('express');
 const bodyParser = require('body-parser');
 
@@ -22,7 +23,7 @@ const restaurant = require('./src/routes/restaurant');
 app.use('/aggregator', restaurant);
 
 app.get('/', (req, res) => {
-    res.send('Aggregator Gateway Server Started');
+    res.send('Aggregator Gateway Server Started Started process id is ' + process.pid +' and port is '+ PORT);
 });
 
 const PORT = process.env.PORT || 4444;
