@@ -3,10 +3,10 @@ const config = require('../../config/config');
 const serverURLS = require('../../config/consul');
 
 function getRestaurantIds(body) {
-    const restaurantSearch = '/search';
+    const restaurantSearch = 'search';
     const options = {
         method: 'POST',
-        uri: config.mongoUrls.restaurant + restaurantSearch,
+        uri: serverURLS().restaurantServer[0] + restaurantSearch,
         body: body,
         json: true // Automatically stringifies the body to JSON
     };
@@ -45,13 +45,14 @@ function getRevenueByOrders(body) {
 }
 
 function getOrdersList(restaurantsList) {
-    const orderList = '/list';
+    const orderList = 'order/list';
     const options = {
         method: 'POST',
-        uri: config.mongoUrls.orders + orderList,
+        uri: serverURLS().orderServer[0] + orderList,
         body: restaurantsList,
         json: true // Automatically stringifies the body to JSON
     };
+    console.log(options);
     return new Promise((resolve, reject) => {
         rp(options)
             .then(function (response) {
