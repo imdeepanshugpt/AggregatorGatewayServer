@@ -8,6 +8,8 @@
 
 **Technology Used: NodeJS, Express JS, Consul, PM2, Docker.**
 
+![Micro Services Architecture](images/MicroServices.png)
+
 # How to run this server
 
 **This server is using consul configuration code so first pull the consul image from docker hub by using following command and launch the container**
