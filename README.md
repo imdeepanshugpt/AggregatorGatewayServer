@@ -1,5 +1,5 @@
 # AggregatorGatewayServer
-- It is a aggregator gateway server of order server and restaurant server.
+- It is a aggregator gateway server of [order server](https://github.com/imdeepanshugpt/orderServer) and [restaurant server](https://github.com/imdeepanshugpt/restaurantServer).
 - It is used to connect both order server and restaurant server.
 - It is used to make aggergate queries and fetching data from order server and restaurant server.
 - There are two API's are created for aggergate queries /todaysOrder and /todaysRevenue of a multiple restaurants of a city.
