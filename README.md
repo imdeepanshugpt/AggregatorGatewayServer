@@ -7,7 +7,7 @@
 **Clustering, Service Discovery**
 
 **Technology Used: NodeJS, Express JS, Consul, PM2, Docker.**
-
+# MicroServices Architecture
 ![Micro Services Architecture](images/MicroServices.png)
 
 # How to run this server
